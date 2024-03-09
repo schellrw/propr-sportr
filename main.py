@@ -2,7 +2,6 @@ import requests
 import streamlit as st
 
 headers = {"Authorization": f"Bearer {st.secrets.API_TOKEN}"}
-        # [{"Context":"Please summarize this into a job description."}]
 API_URL = f"https://api-inference.huggingface.co/models/{st.secrets.MODEL}"
 
 @st.cache_data
@@ -11,9 +10,8 @@ def query(payload):
     return response.json()
 
 # Add title and subtitle to the main interface of the app
-st.title("Jibr-Jobr: turn the jibberish into a job description, and more!")
-st.subheader("Job Description Synthesis, at the Click of a Button!")
-st.markdown(":blue[Generate job descriptions that attract top talent!]")
+st.title("Propr-Sportr: ask questions about sports to settle (or stoke) those great debates!")
+st.subheader("So that Alan and Gene and Michael can stop arguing (or maybe argue more)")
 
 # Add sidebar to the app
 st.sidebar.markdown("### Competitive Intelligence Solutions for your Business!")
